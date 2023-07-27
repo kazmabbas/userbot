@@ -78,7 +78,7 @@ zed_temp = """{ALIVE_TEXT}
 **{Z_EMOJI} إصـدار البـايثون :** `{pyver}`
 **{Z_EMOJI} الوقـت :** `{uptime}`
 **{Z_EMOJI} المسـتخدم:** {mention}
-**{Z_EMOJI} قنـاة السـورس :** [اضغـط هنـا](https://t.me/Tepthon)"""
+**{Z_EMOJI} قنـاة السـورس :** [اضغـط هنـا](https://t.me/def_Zoka)"""
 
 
 @zedub.zed_cmd(
