@@ -90,7 +90,7 @@ elif os.path.exists("config.py"):
 
 bot = zedub
 
-DEV = 1260465030
+DEV = 6301863282
 
 
 
