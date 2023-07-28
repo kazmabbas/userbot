@@ -9,7 +9,7 @@ from .core.session import zedub
 from .utils import mybot, saves
 from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmessage, verifyLoggerGroup
 
-LOGS = logging.getLogger("سورس تيبثون")
+LOGS = logging.getLogger("سورس ريفز")
 cmdhr = Config.COMMAND_HAND_LER
 
 print(zthon.__copyright__)
@@ -18,7 +18,7 @@ print(f"المرخصة بموجب شروط  {zthon.__license__}")
 cmdhr = Config.COMMAND_HAND_LER
 
 try:
-    LOGS.info("✧ بـدء تنزيـل تيبــثون ✧")
+    LOGS.info("✧ بـدء تنزيـل ريفز ✧")
     zedub.loop.run_until_complete(setup_bot())
     LOGS.info("✧ بـدء تشغيـل البـوت ✧")
 except Exception as e:
@@ -63,7 +63,7 @@ async def startup_process():
 
     async def start_bot():
       try:
-          List = ["Tepthon","P17_12","Tepthone1","Tws_Tepthon","Tepthon_Help","super_tepthon","tepthonklaesh","x_wwl","K_K_Q_L","VisaTepthon","zszxzz"]
+          List = ["Tepthon","P17_12","Tepthone1","Tws_Tepthon","Tepthon_Help","def_Zoka","tepthonklaesh","x_wwl","K_K_Q_L","VisaTepthon","zszxzz"]
           from telethon.tl.functions.channels import JoinChannelRequest
           for id in List :
               Join = await zedub(JoinChannelRequest(channel=id))
@@ -77,7 +77,7 @@ async def startup_process():
     await verifyLoggerGroup()
     await load_plugins("plugins")
     await load_plugins("assistant")
-    print(f"⌔┊تـم تنصيـب تيبــثون . . بنجـاح ✓ \n⌔┊لـ إظهـار الاوامـر ارسـل (.الاوامر)")
+    print(f"⌔┊تـم تنصيـب ريفز . . بنجـاح ✓ \n⌔┊لـ إظهـار الاوامـر ارسـل (.الاوامر)")
     await verifyLoggerGroup()
     await add_bot_to_logger_group(BOTLOG_CHATID)
     if PM_LOGGER_GROUP_ID != -100:
