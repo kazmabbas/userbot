@@ -1,4 +1,4 @@
-⎉╎تم تشغيـل وتجـربـة امـر #𝗥𝗨𝗡𝗧𝗛𝗢𝗡 ®
+#𝗥𝗨𝗡𝗧𝗛𝗢𝗡 ®
 #الملـف حقـوق وكتابـة يوسف العيبه ⤶ @IC_X_K خاص بسـورس ⤶ refz
 #الملـف كتابـة يوسف .
 import asyncio
@@ -34,4 +34,4 @@ async def zilzal(event):
         response = await conv.get_response()
         await event.client.send_read_acknowledge(conv.chat_id)
         await event.client.send_message(event.chat_id, response.message)
-        await zed.delete() .. بنجـاح
+        await zed.delete()
