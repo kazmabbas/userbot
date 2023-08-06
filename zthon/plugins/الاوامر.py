@@ -331,7 +331,7 @@ async def zed_handler(event):
     await zedub.get_me()
     if query.startswith("ريفز") and event.query.user_id == zedub.uid:
         ZPIC = gvarstatus("ALIVE_PIC")
-        buttons = [[Button.url("سورس ريفز العربي - refz USERBOT", "https://t.me/def_Zoka"),],[Button.url("التحـديثـات", "https://t.me/def_Zoka"), Button.url("الفـارات", "https://t.me/def_Zokae1"),],[Button.url("الشـروحـات¹", "https://t.me/Tws_def_Zoka"),],[Button.url("كــلايــش ريفز", "https://t.me/def_Zokaklaesh"),],[Button.url("مطـور السـورس", "https://t.me/IC_X_K"),]]
+        buttons = [[Button.url("سورس ريفز العربي - refz USERBOT", "https://t.me/def_Zoka"),],[Button.url("التحـديثـات", "https://t.me/def_Zoka"), Button.url("الفـارات", "https://t.me/def_Zokae1"),],[Button.url("الشـروحـات¹", "https://t.me/Tws_def_Zoka"),],[Button.url("كــلايــش ريفز", "https://t.me/def_Zokaklaesh"),],[Button.url("مطـور السـورس", "https://t.me/IC_X_K"),]][Button.url("2مطـور السـورس", "https://t.me/IC_X_K"),]]
         if ZPIC and ZPIC.endswith((".jpg", ".png", "gif", "mp4")):
             result = builder.photo(ZPIC,text=Channels, buttons=buttons, link_preview=True)
         elif ZPIC and ZPIC.endswith((".gif", ".mp4")):
@@ -360,7 +360,7 @@ async def zed_handler(event):
     await zedub.get_me()
     if query.startswith("السورس") and event.query.user_id == zedub.uid:
         ZPIC = gvarstatus("ALIVE_PIC")
-        buttons = [[Button.url("سورس ريفز العربي - def_Zoka USERBOT", "https://t.me/def_Zoka")]]
+        buttons = [[Button.url("سورس ريفز العربي - refz USERBOT", "https://t.me/def_Zoka")]]
         if ZPIC and ZPIC.endswith((".jpg", ".png")):
             result = builder.photo(ZPIC,text=Zelzal, buttons=buttons, link_preview=True)
         elif ZPIC and ZPIC.endswith((".gif", ".mp4")):
@@ -389,7 +389,7 @@ async def zed_handler(event):
     await zedub.get_me()
     if query.startswith("سورس") and event.query.user_id == zedub.uid:
         ZPIC = gvarstatus("ALIVE_PIC")
-        buttons = [[Button.url("سورس ريفز العربي - def_Zoka USERBOT", "https://t.me/def_Zoka")]]
+        buttons = [[Button.url("سورس ريفز العربي - refz USERBOT", "https://t.me/def_Zoka")]]
         if ZPIC and ZPIC.endswith((".jpg", ".png")):
             result = builder.photo(ZPIC,text=Zelzal, buttons=buttons, link_preview=True)
         elif ZPIC and ZPIC.endswith((".gif", ".mp4")):
