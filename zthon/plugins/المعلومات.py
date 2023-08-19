@@ -1,4 +1,4 @@
-#ZedThon
+#refz
 
 import asyncio
 import platform
@@ -131,7 +131,7 @@ async def _(event):
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = (
-        f"**[𝗦𝗢𝗨𝗥𝗖𝗘 𝙏𝞝𝙋 ](tg://need_update_for_some_feature/) - فـارات تنصيبـك هـي:**\n\n\n{o}"
+        f"**[𝗦𝗢𝗨𝗥𝗖𝗘refz ](tg://need_update_for_some_feature/) - فـارات تنصيبـك هـي:**\n\n\n{o}"
     )
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
@@ -168,7 +168,7 @@ async def _(event):
     )
     stdout, stderr = await process.communicate()
     o = stdout.decode()
-    OUTPUT = f"**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝗘 𝙏𝞝𝙋 ](tg://need_update_for_some_feature/) - سرعـة السيرفـر**\n**- تم حسـاب سرعـة سيرفـر البـوت الخـاص بك :**\n\n{o}"
+    OUTPUT = f"**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝗘 REFZ ](tg://need_update_for_some_feature/) - سرعـة السيرفـر**\n**- تم حسـاب سرعـة سيرفـر البـوت الخـاص بك :**\n\n{o}"
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
@@ -188,7 +188,7 @@ async def _(event):
 @zedub.zed_cmd(pattern="تاريخ التنصيب$")
 async def zeddd(event):
     uname = platform.uname()
-    zedt = "**- تاريخ تنصيبـك لـ بـوت تيبثـــون - 𓆩𝙎𝙊𝙐𝙍𝘾𝞝 𝙏𝞝𝙋 𓆪**\n\n"
+    zedt = "**- تاريخ تنصيبـك لـ بـوت ريفز - 𓆩𝙎𝙊𝙐𝙍𝘾𝞝 REFZ 𓆪**\n\n"
     uptime = await get_readable_time((time.time() - StartTime))
     boot_time_timestamp = psutil.boot_time()
     bt = datetime.fromtimestamp(boot_time_timestamp)
