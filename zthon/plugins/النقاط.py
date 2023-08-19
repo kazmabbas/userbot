@@ -89,7 +89,7 @@ async def _(event):
             chs += 1
             await event.edit(f"**𓆰 تم بنجـاح الاشتـراك في {chs} قنـاة .❗**")
         except:
-            msg2 = await zedub.get_messages('@zmmbot', limit=1)
+            msg2 = await zedub.get_messages('@EEObot', limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**𓆰 القنـاة رقـم {chs} خطـأ .. يمكـن تبنـدت**")
@@ -100,7 +100,7 @@ async def _(event):
 @zedub.zed_cmd(pattern="تجميع المليار ?(.*)")
 async def _(event):
     con = event.pattern_match.group(1).lower()
-    await event.edit("**𓆰 حـسنـًا .. تأكـد من انك مشتـرك بـ قنـوات الاشتـراك الاجبـاري لتجنب الأخطـاء @zmmbot**")
+    await event.edit("**𓆰 حـسنـًا .. تأكـد من انك مشتـرك بـ قنـوات الاشتـراك الاجبـاري لتجنب الأخطـاء @EEObot**")
     channel_entity = await zedub.get_entity('@EEObot')
     await zedub.send_message('EEObot', '/start')
     await asyncio.sleep(4)
