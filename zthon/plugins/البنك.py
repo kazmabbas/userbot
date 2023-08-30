@@ -1,7 +1,7 @@
 import random
 import re
 import time
-from datetime import datetime
+from datetime import zedub
 
 from telethon.errors.rpcerrorlist import (
     MediaEmptyError,
@@ -9,7 +9,7 @@ from telethon.errors.rpcerrorlist import (
     WebpageMediaEmptyError,
 )
 
-from joker import l313l
+from zthon import   zedub
 
 from ..core.managers import edit_or_reply
 from ..helpers.utils import reply_id
