@@ -65,6 +65,15 @@ async def _(event):
         await event.edit("".join(deq))
         deq.rotate(1)
 
+@zedub.zed_cmd(pattern="بعصه$")
+async def _(event):
+    event = await edit_or_reply(event, ".🖕")
+    deq = deque(list("🖕🤣🖕🤣🖕"))
+    for _ in range(48):
+        await asyncio.sleep(0.1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
+
 
 @zedub.zed_cmd(pattern="قلب$")
 async def _(event):
@@ -212,6 +221,7 @@ Fun2_cmd = (
 "  •  `.افكر`\n"
 "  •  `.متت`\n"
 "  •  `.ضايج`\n"
+    "  •  `.بعصه`\n"
 "  •  `.انتحر`\n\n"
   
 "**- اضغـط ع الامـر لـ النسـخ"
