@@ -1,65 +1,48 @@
-import random
-import re
-import time
-from datetime import zedub
+# ======================================================================================================================================
+# ping -> edited ping with pic by  @zthon
+# كتابة الملف لسورس سبايدر فقط ممنوع نسبه لنفسك
+# تخمط دليل فشلك اخمط وكول اني مطور 😂😂
 
-from telethon.errors.rpcerrorlist import (
-    MediaEmptyError,
-    WebpageCurlFailedError,
-    WebpageMediaEmptyError,
+import os
+from datetime import datetime
+
+from zthon import zthon
+
+#
+from . import hmention, reply_id
+
+PING_PIC = os.environ.get("PING_PIC") or (
+    "https://telegra.ph/file/22bec9ffa06519aba18c8.jpg"
 )
 
-from zthon import   zedub
+JM_TXT = os.environ.get("PING_TEXT") or "مـن لا يتعلم من الماضي لا يرحمه المستقبل  . 🖤"
 
-from ..core.managers import edit_or_reply
-from ..helpers.utils import reply_id
-from ..sql_helper.globals import gvarstatus
-from . import mention
 
-plugin_category = "utils"
-
-#كتـابة وتعـديل:  @lMl10l
-@zedub.on(admin_cmd(pattern=f"بنك(?:\s|$)([\s\S]*)"))
-    
-async def amireallyalive(event):
-    "للتـأكد من ان البـوت يعـمـل"
+@zthon.ar_cmd(pattern="بنك$")
+async def _(event):
     reply_to_id = await reply_id(event)
     start = datetime.now()
-    await edit_or_reply(event, "** ᯽︙ يتـم التـأكـد من البنك انتـظر قليلا رجاءا**")
-    end = datetime.now()
-    ms = (end - start).microseconds / 1000
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "✇ ◅"
-    PING_TEXT = gvarstatus("PING_TEXT") or "**[ 𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 ](t.me/xo_ot)**"
-    PING_IMG = gvarstatus("PING_PIC") or Config.P_PIC or "https://telegra.ph/file/fb62d70ce09f4a78dfc86.jpg"
-    joker_caption = gvarstatus("PING_TEMPLATE") or temp
-    caption = joker_caption.format(
-        PING_TEXT=PING_TEXT,
-        EMOJI=EMOJI,
-        mention=mention,
-        ping=ms,
+    roz = await edit_or_reply(
+        event, "<b><i>  ❤️⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃟✨ البــــنك... 🍀⃝⃝⃟🍂 </b></i>", "html"
     )
-    if PING_IMG:
-        JEP = [x for x in PING_IMG.split()]
-        PIC = random.choice(JEP)
-        try:
-            await event.client.send_file(
-                event.chat_id, PIC, caption=caption, reply_to=reply_to_id
-            )
-            await event.delete()
-        except (WebpageMediaEmptyError, MediaEmptyError, WebpageCurlFailedError):
-            return await edit_or_reply(
-                event,
-                f"**الميـديا خـطأ **\nغـير الرابـط بأستـخدام الأمـر  \n `.اضف_فار ALIVE_PIC رابط صورتك`\n\n**لا يمـكن الحـصول عـلى صـورة من الـرابـط :-** `{PIC}`",
-            )
+    end = datetime.now()
+    await roz.delete()
+    ms = (end - start).microseconds / 1000
+    if PING_PIC:
+        caption = f"<b><i>{JM_TXT}<i><b>\n<code>┏━━━━━━━┓\n┃ ✦ {ms}\n┃ ✦ <b>{hmention}</b>\n┗━━━━━━━┛"
+        await event.client.send_file(
+            event.chat_id,
+            PING_PIC,
+            caption=caption,
+            parse_mode="html",
+            reply_to=reply_to_id,
+            link_preview=False,
+            allow_cache=True,
+        )
     else:
-        await edit_or_reply(
-            event,
-            caption,
+        await event.edit_or_reply(
+            event, "<code>يجـب اضـافة متـغير `PING_PIC`  اولا  f<code>", "html"
         )
 
 
-temp = """{PING_TEXT}
-┏━━━━━━━┓
-┃ ✦ {ping}
-┃ ✦ {mention}
-┗━━━━━━━┛"""
+# ======================================================================================================================================
