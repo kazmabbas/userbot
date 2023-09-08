@@ -22,11 +22,8 @@ LOGS = logging.getLogger(__name__)
 ZDEV = gvarstatus("sudoenable") or "true"
 
 ZelzalDV_cmd = (
-    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - مطورين ريفز](t.me/def_Zoka) 𓆪\n\n"
-    "**⪼** 💎المطور سينزر @IC_X_K\n"
-    "**⪼** 💎المطور فيجر @Q_2_Q_Y\n"
-    "**⪼** 💎المطور رينزر @r1e_z\n"
-    "**⪼** 💎المطورة سيلينا @celen0\n"
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر حالات الحساب](t.me/def_Zoka) 𓆪\n\n"
+    "**⪼** 💎اقرئ هذه الرساله https://t.me/IC_X_X/5\n"
     "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/IC_X_K) 𓆪"
 )
 
@@ -447,7 +444,7 @@ zedub.loop.create_task(_init())
 
 
 # Copyright (C) 2022 Zed-Thon . All Rights Reserved
-@zedub.zed_cmd(pattern="سينزر")
+@zedub.zed_cmd(pattern="م22")
 async def cmd(zelzallll):
     await edit_or_reply(zelzallll, ZelzalDV_cmd)
 
