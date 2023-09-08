@@ -1,3 +1,4 @@
+حقوق سينزر مطور ريفز يازبي#
 from datetime import datetime
 
 from telethon.utils import get_display_name
@@ -29,7 +30,7 @@ ZelzalDV_cmd = (
     "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/IC_X_K) 𓆪"
 )
 
-
+#نايك اختك سينزر#
 async def _init() -> None:
     sudousers = _sudousers_list()
     Config.SUDO_USERS.clear()
