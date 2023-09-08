@@ -23,7 +23,8 @@ ZDEV = gvarstatus("sudoenable") or "true"
 
 ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر بوت فاذر ](t.me/def_Zoka) 𓆪\n\n"
-    "⪼ 💎قم بقرائه هذه الرساله https://t.me/IC_X_X/2\n"
+    "⪼ 💎قم بقرائه هذه الرساله \n"
+    "⪼ https://t.me/IC_X_X/2 \n"
     "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/IC_X_K) 𓆪"
     "\n𓆩 [𐇮 ⧛𝐙𝐎𝐊𝐀 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/Q_2_Q_Y) 𓆪"
 )
