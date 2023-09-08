@@ -446,7 +446,7 @@ zedub.loop.create_task(_init())
 
 
 # Copyright (C) 2022 Zed-Thon . All Rights Reserved
-@zedub.zed_cmd(pattern="م25")
+@zedub.zed_cmd(pattern="م27")
 async def cmd(zelzallll):
     await edit_or_reply(zelzallll, ZelzalDV_cmd)
 
