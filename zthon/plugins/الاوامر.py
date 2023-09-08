@@ -156,7 +156,7 @@ async def zed(event):
 
 
 
-#الكـالبـاك ابديـت - تيبثـون - كتابة زلـزال الهيبـة - زدثـون
+#الكـالبـاك ابديـت - ريفز - كتابة سينزر الهيبـة - ريفز
 @zedub.tgbot.on(CallbackQuery(data=re.compile(rb"aahmed")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
