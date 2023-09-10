@@ -1,5 +1,5 @@
-# Zed-Thon
-# Copyright (C) 2022 Zed-Thon . All Rights Reserved
+# refz
+# Copyright (C) 2023 refz . All Rights Reserved
 #
 # This file is a part of < https://github.com/Zed-Thon/ZelZal/ >
 # PLease read the GNU Affero General Public License in
@@ -7,7 +7,7 @@
 
 #الملـف متعـوب عليه تخمـط اذكر المصـدر
 #تخمـط بـدون مصـدر اهينـك
-
+#حقوق اخوويا زلزال تعديل سينزر
 import os
 import random
 from asyncio import sleep
