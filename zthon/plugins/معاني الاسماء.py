@@ -1,7 +1,7 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-# Port to ZThon
-# modified by @ZedThon
-# Copyright (C) 2022.
+#Refz ®
+# Port to refz
+# modified by @refz
+# Copyright (C) 2023.
 
 import asyncio
 import os
