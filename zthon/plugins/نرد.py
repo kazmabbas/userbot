@@ -1,4 +1,4 @@
-""" ©ZED™ - @ZlZZl77 """
+""" ©SENZir™ - @IC_X_K """
 
 import asyncio
 import random
