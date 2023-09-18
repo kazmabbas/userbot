@@ -24,10 +24,15 @@ async def _(event):
         await asyncio.sleep(0.1)
         await event.edit("".join(deq))
         deq.rotate(1)
-
-@client.on(events.NewMessage(pattern='(.i)سنزر'))
-async def handler(event):
-    await event.reply("عيون سينزر🥹")
+        
+@zedub.zed_cmd(pattern="شطان$")
+async def _(event):
+    event = await edit_or_reply(event, ".😈")
+    deq = deque(list("👿😈👿😈👿👿"))
+    for _ in range(48):
+        await asyncio.sleep(0.1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
 
 client.start()
 client.run_until_disconnected()
@@ -224,6 +229,7 @@ Fun2_cmd = (
 "  •  `.مح`\n"
 "  •  `.قلب`\n"
 "  •  `.جيم`\n"
+    "  •  `.شطان`\n"
 "  •  `.افكر`\n"
 "  •  `.متت`\n"
 "  •  `.ضايج`\n"
