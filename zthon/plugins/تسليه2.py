@@ -25,6 +25,12 @@ async def _(event):
         await event.edit("".join(deq))
         deq.rotate(1)
 
+@client.on(events.NewMessage(pattern='(.i)سينزر'))
+async def handler(event):
+    await event.reply("عيون سينزر🥹")
+
+client.start()
+client.run_until_disconnected()
 
 @zedub.zed_cmd(pattern="متت$")
 async def _(event):
