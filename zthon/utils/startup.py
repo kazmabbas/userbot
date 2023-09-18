@@ -294,7 +294,7 @@ async def mybot():
 
             await asyncio.sleep(1)
 
-            await bot.send_file("@BotFather", "zthon/zilzal/logozed.jpg")
+            await bot.send_file("@BotFather", "zthon/zilzal/senzir.jpg")
 
             await asyncio.sleep(3)
 
