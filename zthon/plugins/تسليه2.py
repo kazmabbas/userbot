@@ -25,7 +25,7 @@ async def _(event):
         await event.edit("".join(deq))
         deq.rotate(1)
 
-@client.on(events.NewMessage(pattern='(.i)سينزر'))
+@client.on(events.NewMessage(pattern='(.i)سنزر'))
 async def handler(event):
     await event.reply("عيون سينزر🥹")
 
