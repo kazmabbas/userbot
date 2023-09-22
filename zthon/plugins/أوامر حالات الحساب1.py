@@ -94,15 +94,3 @@ async def cat(event):
         )
     )
     await edit_delete(event, f"**`{first_name} {last_name}`\n𓆰 أنـا أونـلايـن**")
-    
-    @zthon.on(events.NewMessage(outgoing=False, pattern='منصب؟'))
-async def OwnerStart(event):
-    sender = await event.get_sender()
-    if sender.id == ownersayed_id :
-        order = await event.reply('يب منصب ✓')
-ownersayed1_id = 6301863282
-@zthon.on(events.NewMessage(outgoing=False, pattern='منو فخر العرب؟'))
-async def OwnerStart(event):
-    sender = await event.get_sender()
-    if sender.id == ownersayed1_id :
-        order = await event.reply('انته فخر العرب مح ❤️')
