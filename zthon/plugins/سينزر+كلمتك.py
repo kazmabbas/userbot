@@ -1,5 +1,5 @@
 #refz ®
-#الملـف حقـوق وكتابـة المبرمج سينزر
+#الملـف حقـوق وكتابـة المبرمج يا الهي
 import asyncio
 import os
 import sys
@@ -17,17 +17,17 @@ from ..core.managers import edit_or_reply
 
 
 
-@zedub.zed_cmd(pattern="سينزر ?(.*)")
+@zedub.zed_cmd(pattern="يا الهي ?(.*)")
 async def zilzal(event):
     card = event.pattern_match.group(1)
-    chat = "@t0kken_bot"
+    chat = "@maker_refz_bot"
     reply_id_ = await reply_id(event)
     zed = await edit_or_reply(event, "**جـاري تنفيد طلبك انتظـر قليـلًا ... 💡**")
     async with event.client.conversation(chat) as conv:
         try:
             await conv.send_message(card)
         except YouBlockedUserError:
-            await zedub(unblock("@t0kken_bot"))
+            await zedub(unblock("@maker_refz_bot"))
             await conv.send_message(card)
         await asyncio.sleep(2)
         response = await conv.get_response()
