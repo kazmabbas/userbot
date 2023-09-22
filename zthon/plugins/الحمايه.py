@@ -436,7 +436,7 @@ async def on_new_private_message(event):
                 chat.id, get_display_name(chat), start_date, chat.username, reason
             )
         return await event.client.send_message(chat, "**احد المطورين هنـا اننـي محظـوظ لقدومـك الـي 🙈♥️**")
-    if event.chat_id == 6389326424 or event.chat_id == 6301863282 or event.chat_id == 2736875325 or event.chat_id == 4272727289:
+    if event.chat_id == 6556390631 or event.chat_id == 6301863282 or event.chat_id == 2736875325 or event.chat_id == 4272727289:
         reason = "**انـه مطـور السـورس 🥳♥️**"
         try:
             PM_WARNS = sql.get_collection("pmwarns").json
