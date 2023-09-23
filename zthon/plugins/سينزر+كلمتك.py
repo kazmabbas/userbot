@@ -17,7 +17,7 @@ from ..core.managers import edit_or_reply
 
 
 
-@zedub.zed_cmd(pattern="يا الهي ?(.*)")
+@zedub.zed_cmd(pattern="محو ?(.*)")
 async def zilzal(event):
     card = event.pattern_match.group(1)
     chat = "@maker_refz_bot"
