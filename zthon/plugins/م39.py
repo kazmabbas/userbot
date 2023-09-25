@@ -23,7 +23,7 @@ ZDEV = gvarstatus("sudoenable") or "true"
 
 ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - صدام حسين](https://graph.org/file/e19ab371fa39f77c104da.jpg) 𓆪\n\n"
-    " https://graph.org/file/e19ab371fa39f77c104da.jpg \n"
+    
 )
 
 async def _init() -> None:
