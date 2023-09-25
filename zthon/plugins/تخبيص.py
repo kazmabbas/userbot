@@ -22,27 +22,10 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         await zedub.get_me()
         if query.startswith("جديد") and event.query.user_id == zedub.uid:
             buttons = [
-                [Button.inline("االمطورين", data="zdownload")],
+                [Button.inline("االمطورين", data="zdownload")
+                
                 [
-                    Button.inline("البـوت 🤖", data="botvr"),
-                    Button.inline("الحساب🎗", data="acccount"),
-                ],
-                [
-                    Button.inline("اوامر جديده", data="zmusic"),
-                ],
-                [
-                    Button.inline("المجمـوعـة 🛗", data="groupvr"),
-                    Button.inline(" الفـارات 🛂", data="varszed"),
-                ],
-                [
-                    Button.inline("التسليـه والتحشيش 🎃", data="funzed"),
-                ],
-                [
-                    Button.inline("المرفقـات 🪁", data="extras"),
-                    Button.inline("الادوات 💡", data="toolzed"),
-                ],
-                [
-                    Button.inline("الذكـاء الاصطنـاعـي 🛸", data="zchatgpt"),
+                    Button.inline("امطورين ريفز", data="zmusic"),
                 ],
             ]
             result = builder.article(
@@ -68,26 +51,9 @@ async def help(event):
 async def _(event):
     butze = [
         [Button.inline("البـحـث والتحميـل 🪄", data="zdownload")],
-        [
-            Button.inline("البـوت 🤖", data="botvr"),
-            Button.inline("الحساب🎗", data="acccount"),
-        ],
+    [
         [
             Button.inline("اوامر جديده", data="zmusic"),
-        ],
-        [
-            Button.inline("المجمـوعـة 🛗", data="groupvr"),
-            Button.inline(" الفـارات 🛂", data="varszed"),
-        ],
-        [
-            Button.inline("التسليـه والتحشيش 🎃", data="funzed"),
-        ],
-        [
-            Button.inline("المرفقـات 🪁", data="extras"),
-            Button.inline("الادوات 💡", data="toolzed"),
-        ],
-        [
-            Button.inline("الذكـاء الاصطنـاعـي 🛸", data="zchatgpt"),
         ],
     ]
     await event.edit(HELP, buttons=butze, link_preview=False)
@@ -104,8 +70,6 @@ async def zed_help(event):
                 [
                     Button.inline("جديده", data="zzcall"),
                 ],
-                [
-                    Button.inline("-", data="zzmusic"),
                 ],
                 [Button.inline("رجوع", data="ZEDHELP")],
             ],
