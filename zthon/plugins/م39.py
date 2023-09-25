@@ -22,10 +22,8 @@ LOGS = logging.getLogger(__name__)
 ZDEV = gvarstatus("sudoenable") or "true"
 
 ZelzalDV_cmd = (
-    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - صدام](t.me/def_Zoka) 𓆪\n\n"
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - صدام حسين](https://graph.org/file/e19ab371fa39f77c104da.jpg) 𓆪\n\n"
     " https://graph.org/file/e19ab371fa39f77c104da.jpg \n"
-    
-    "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/IC_X_K) 𓆪"
 )
 
 async def _init() -> None:
