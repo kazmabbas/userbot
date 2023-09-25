@@ -8,7 +8,7 @@ from . import zedub
 
 from ..Config import Config
 from . import mention
-HELP = f"**🧑🏻‍💻┊مـࢪحبـاً عـزيـزي {mention}**\n**🛂┊في قائمـة المسـاعـده والشـروحـات\n🛃┊من هنـا يمكنـك ايجـاد شـرح لكـل اوامـر السـورس**\n\n[ᯓ 𝐑𝐄𝐅𝐙 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 ♥️](https://t.me/def_Zoka)\n\n"
+HELP = f"**🧑🏻‍💻┊مـࢪحبـاً عـزيـزي {mention}**\n**🛂┊في قائمـة المسـاعـده والشـروحـات\n🛃┊ من هنـا يمكنـك ايجـاد شـرح لسينزر وزوكا**\n\n[ᯓ 𝐑𝐄𝐅𝐙 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 ♥️](https://t.me/def_Zoka)\n\n"
 
 
 if Config.TG_BOT_USERNAME is not None and tgbot is not None:
