@@ -34,7 +34,7 @@ LOGS = logging.getLogger(__name__)
 PICS_STR = []
 
 
-# code by t.me/zzzzl1l
+# code by t.me/IC_X_K
 async def get_font_file(client, channel_id):
     font_file_message_s = await client.get_messages(
         entity=channel_id,
@@ -46,7 +46,7 @@ async def get_font_file(client, channel_id):
     return await client.download_media(font_file_message)
 
 
-# code by t.me/zzzzl1l
+# code by t.me/IC_X_K
 @zedub.zed_cmd(pattern=r"لوكو ?(.*)")
 async def lg1(userevent):
     event = await eor(userevent, "**- جـارِ صنـع لـوكـو انكـلش بحقـوقك ...**")
@@ -60,7 +60,7 @@ async def lg1(userevent):
     if userevent.reply_to_msg_id:
         rply = await userevent.get_reply_message()
         logo_ = await rply.download_media()
-    else: # code by t.me/zzzzl1l
+    else: # code by t.me/IC_X_K
         async for i in bot.iter_messages(
             "@Z_44_Z", filter=InputMessagesFilterPhotos
         ):
