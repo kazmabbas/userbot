@@ -8,7 +8,7 @@
 # تخمــط بــدون ذكــر المصــدر ابلــع حســابـك بانـــد
 """ 
 CC Checker & Generator for refz,™ t.me/IC_X_K
-Write file by Zelzal t.me/IC_X_K
+Write file by senzir t.me/IC_X_K
 hhh o ya beby
 
 """
