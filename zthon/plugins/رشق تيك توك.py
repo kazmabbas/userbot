@@ -15,7 +15,7 @@ from zthon import zedub
 from ..core.managers import edit_or_reply
 
 
-@client.ar_cmd(pattern="تيك توك ?(.*)")
+@client.ar_cmd(pattern=" رشوق تيك توك ?(.*)")
 async def zilzal(event):
     card = event.pattern_match.group(1)
     chat = "@Rtek1000bot"
