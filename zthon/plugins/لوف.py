@@ -1,5 +1,5 @@
-# PLUGIN MADE BY @RRRLz FOR @ZedThon
-# 𝖹Ꭵᥣᴢᥲ️ᥣ
+# PLUGIN MADE BY @IC_X_K FOR @def_Zoka
+# Senzir
 
 import random, re
 import asyncio
