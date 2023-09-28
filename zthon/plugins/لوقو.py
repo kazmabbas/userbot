@@ -5,15 +5,15 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/Zed-Thon/ZelZal/blob/main/LICENSE/>.
 """ 
-Logo & Style for ZThon™ t.me/ZedThon
-Write file by Zelzal t.me/zzzzl1l
+Logo & Style for ZThon™ t.me/def_Zoka
+Write file by SeNzIr t.me/IC_X_K
 
 """
 
 import os
 import random
 import string
-try: # code by t.me/zzzzl1l
+try: # code by t.me/IC_X_K
     import arabic_reshaper
 except ModuleNotFoundError:
     os.system("pip3 install arabic_reshaper")
@@ -53,7 +53,7 @@ async def lg1(userevent):
     me = await userevent.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    if gvarstatus("ZED_FONTS") is None: # code by t.me/zzzzl1l
+    if gvarstatus("ZED_FONTS") is None: # code by t.me/IC_X_K
         zed_font = await get_font_file(userevent.client, "@T_Taiz")
     else:
         zed_font = gvarstatus("ZED_FONTS")
@@ -74,7 +74,7 @@ async def lg1(userevent):
     arabic_text = "".join(
         char for char in text if char.isalpha() and char not in string.ascii_letters
     )
-    if arabic_text: # code by t.me/zzzzl1l
+    if arabic_text: # code by t.me/IC_X_K
         await eor(event, "**- الرجاء إدخال نص باللغـة الانجليـزية فقـط.**\n`.لوكو` + **نص انكـلش**\n`.لوقو` + **نص عـربـي**")
         return
     if len(text) <= 8:
@@ -121,14 +121,14 @@ async def lg1(userevent):
 
 
 
-# code by t.me/zzzzl1l
+# code by t.me/IC_X_K
 @zedub.zed_cmd(pattern=r"لوقو ?(.*)")
 async def lg1(userevent):
     event = await eor(userevent, "**- جـارِ صنـع لـوقـو عـربـي بحقـوقك ...**")
     me = await userevent.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    if gvarstatus("ZED_FONTS") is None: # code by t.me/zzzzl1l
+    if gvarstatus("ZED_FONTS") is None: # code by t.me/IC_X_K
         zed_font = await get_font_file(userevent.client, "@S_SSQ")
     else: # code by t.me/zzzzl1l
         zed_font = gvarstatus("ZED_FONTS")
@@ -149,7 +149,7 @@ async def lg1(userevent):
     arabic_text = "".join(
         char for char in text if char.isalpha() and char not in string.ascii_letters
     )
-    if not arabic_text: # code by t.me/zzzzl1l
+    if not arabic_text: # code by t.me/IC_X_K
         await eor(event, "**- الرجاء إدخال نص باللغـة العربيـة فقـط.**\n`.لوقو` + **نص عـربـي**\n`.لوكو` + **نص انكـلش**")
         return
     if len(text) <= 8:
