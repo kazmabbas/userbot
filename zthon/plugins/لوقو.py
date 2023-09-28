@@ -1,11 +1,11 @@
-# Zed-Thon - ZelZal
+# REfz - senzir
 # Copyright (C) 2023 Zedthon . All Rights Reserved
 #
 # This file is a part of < https://github.com/Zed-Thon/ZelZal/ >
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/Zed-Thon/ZelZal/blob/main/LICENSE/>.
 """ 
-Logo & Style for ZThon™ t.me/def_Zoka
+Logo & Style for refz™ t.me/def_Zoka
 Write file by SeNzIr t.me/IC_X_K
 
 """
