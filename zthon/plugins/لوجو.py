@@ -1,5 +1,5 @@
 """
-Created by @Jisan7509
+Created by @IC_X_K
 #catuserbot
 """
 
