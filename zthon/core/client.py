@@ -179,7 +179,7 @@ class ZedUserBotClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        link = "[yousef(https://t.me/IC_X_K)"
+                        link = "[senzir (https://t.me/IC_X_K)"
                         text = (
                             "**✘ تقـريـر إشعـار ريفز 𝐑𝐄𝐅𝐙𖤊 ✘**\n\n"
                             + "- يمكنك الإبـلاغ عن هـذا الإشعـار .. "
@@ -301,7 +301,7 @@ class ZedUserBotClient(TelegramClient):
                             ftext, pastetype="s", markdown=False
                         )
                         text = "**✘ تقـريـر إشعـار تيبثـون 𝐑𝐄𝐅𝐙𖤊 ✘**\n\n "
-                        link = "[𝙈𝙊𝙃𝘼𝙈𝙈𝘼𝘿(https://t.me/IC_X_K)"
+                        link = "[senzir (https://t.me/IC_X_K)"
                         text += "- يمكنك الإبـلاغ عن هـذا الإشعـار .. "
                         text += f"- فقط قم بإعـادة توجيـه هـذه الرسـالة إلى مطـور السـورس {link}.\n"
                         text += (
