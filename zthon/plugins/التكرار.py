@@ -1,6 +1,7 @@
 import asyncio
 import base64
 import contextlib
+import shutil
 
 from telethon.errors.rpcerrorlist import ForbiddenError
 from telethon.tl import functions, types
@@ -9,20 +10,21 @@ from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.utils import get_display_name
 
-from zthon import zedub
+from . import zedub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import media_type, unsavegif
-from ..helpers.utils import _zedutils
+from ..helpers.utils import _zedutils, _format
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
+from ..sql_helper.echo_sql import addecho, get_all_echos, get_echos, is_echo, remove_all_echos, remove_echo, remove_echos
 from . import BOTLOG, BOTLOG_CHATID
 
 plugin_category = "الخدمات"
-SPAM = gvarstatus(" Z_SPAM") or "(مؤقت|مكرر)"
-UNSPAM = gvarstatus("Z_UNSPAM") or "ايقاف مؤقت"
+SPAM = gvarstatus("Z_SPAM") or "(مؤقت|مكرر)"
+UNSPAM = gvarstatus("Z_UNSPAM") or "(ايقاف مؤقت|ايقاف مكرر)"
 
 ZelzalSP_cmd = (
-    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙  - اوامـر السبـام والتكـرار](t.me/def_Zoka) 𓆪\n\n"
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامـر السبـام والتكـرار](t.me/def_Zoka) 𓆪\n\n"
     "`.كرر` + عـدد + كلمـه\n"
     "**⪼ لـ تكـرار كلمـه معينـه لعـدد معيـن من المـرات**\n\n"
     "`.مكرر` + الوقت بالثواني + العدد + النص\n"
@@ -280,7 +282,7 @@ async def tmeme(event):
     info={
         "header": "تكرار كلمـة او جملـة نصيـه",
         "الاستخـدام": "{tr}سبام + كلمـه",
-        "مثــال": "{tr}سبام ريفز",
+        "مثــال": "{tr}سبام زدثــون",
     },
 )
 async def tmeme(event):
@@ -308,34 +310,15 @@ async def tmeme(event):
             )
 
 
-@zedub.zed_cmd(
-    pattern=f"{SPAM} ([\s\S]*)",
-    command=("مكرر", plugin_category),
-    info={
-        "header": "لـ تكـرار نص لوقت معين وعدد معين من المـرات",
-        "الاستخـدام": [
-            "{tr}مكرر <الوقت بالثواني> <العدد> <النص>",
-        ],
-        "مثــال": "{tr}مكرر 5 10 هلو",
-    },
-)
+@zedub.zed_cmd(pattern=f"{SPAM} ([\s\S]*)")
 async def spammer(event):
-    "لـ تكـرار نص لوقت معين وعدد معين من المـرات"
     reply = await event.get_reply_message()
     input_str = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
     try:
-        sleeptimet = sleeptimem = float(input_str[0])
+        sleeptimet = sleeptimem = int(input_str[0])
     except Exception:
-        return await edit_delete(
-            event, "**- ارسـل الامـر بالشكـل الآتي**\n\n`.مؤقت` **+ عدد الثواني + عدد المرات + الرسالة**\n**- مثـال : .مؤقت 12 12 السلام عليكم**"
-        )
+        return await edit_delete(event, "**- ارسـل الامـر بالشكـل الآتي**\n\n`.مؤقت` **+ عدد الثواني + عدد المرات + الرسالة**\n**- مثـال : .مؤقت 12 12 السلام عليكم**")
     zed = input_str[1:]
-    try:
-        int(zed[0])
-    except Exception:
-        return await edit_delete(
-            event, "**- ارسـل الامـر بالشكـل الآتي**\n\n`.مؤقت` **+ عدد الثواني + عدد المرات + الرسالة**\n**- مثـال : .مؤقت 12 12 السلام عليكم**"
-        )
     await event.delete()
     addgvar("spamwork", True)
     await spam_function(event, reply, zed, sleeptimem, sleeptimet, DelaySpam=True)
@@ -393,7 +376,7 @@ async def stopspamrz(event):
     return await edit_delete(event, "**- لايوجـد هنـاك تڪرار لـ إيقافه ؟!**")
 
 
-@zedub.zed_cmd(pattern=f"{UNSPAM} ?(.*)",)
+@zedub.zed_cmd(pattern=f"{UNSPAM} ?(.*)")
 async def spammer(event):
     reply = await event.get_reply_message()
     await event.delete()
@@ -402,7 +385,7 @@ async def spammer(event):
 
 
 
-# Copyright (C) 2022 Zed-Thon . All Rights Reserved
+# Copyright (C) 2023 refz . All Rights Reserved
 @zedub.zed_cmd(pattern="التكرار")
 async def cmd(zelzallll):
     await edit_or_reply(zelzallll, ZelzalSP_cmd)
