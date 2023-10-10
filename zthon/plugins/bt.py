@@ -25,7 +25,7 @@ from zdthon import zthon
 from ..Config import Config
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
-from IqArab.utils import admin_cmd
+from zthon.utils import admin_cmd
 from ..helpers import AioHttp
 from ..helpers.utils import _catutils, _format, reply_id
 LOGS = logging.getLogger(__name__)
@@ -40,8 +40,8 @@ def iqtfy(inputString: str) -> str:
     return re.sub(IQMOG, "", inputString)
 
 @zthon.on(admin_cmd(pattern="اكس او(?: |$)(.*)"))
-async def iq(iqthon):
-    kn = iqthon.pattern_match.group(1)
+async def iq(zthon):
+    kn = zthon.pattern_match.group(1)
     if not kn:
         if iqthon.is_reply:
             (await iqthon.get_reply_message()).message
@@ -50,14 +50,14 @@ async def iq(iqthon):
     LLL5L = await bot.inline_query("xobot", f"{(iqtfy(kn))}")
     await LLL5L[0].click(
         iqthon.chat_id,
-        reply_to=iqthon.reply_to_msg_id,
+        reply_to=zthon.reply_to_msg_id,
         silent=True if iqthon.is_reply else False,
         hide_via=True)
 @zthon.on(admin_cmd(pattern="همسه ?(.*)"))
 async def iq(zthon):
     if iqthon.fwd_from:
         return
-    kkno = iqthon.pattern_match.group(1)
+    kkno = zthon.pattern_match.group(1)
     donttag = "@whisperBot"
     if iqthon.reply_to_msg_id:
         await iqthon.get_reply_message()
@@ -81,7 +81,7 @@ async def iq(zthon):
 @zthon.on(admin_cmd(pattern="بي دي اف ?(.*)"))
 async def _(zthon):
     if not iqthon.reply_to_msg_id:
-        return await iqthon.edit("**الرجاء الرد على أي نص**")
+        return await zthon.edit("**الرجاء الرد على أي نص**")
     reply_message = await zthon.get_reply_message()
     chat = "@office2pdf_bot"
     await iqthon.edit("**جاري تحويل إلى PDF...**")
@@ -127,10 +127,10 @@ async def iq(zthon):
     if iqthon.fwd_from:
         return
     if not iqthon.reply_to_msg_id:
-        await edit_delete(iqthon, "**الرجاء الرد على الرسالة**")
+        await edit_delete(zthon, "**الرجاء الرد على الرسالة**")
         return
     reply_message = await iqthon.get_reply_message()
-    warna = iqthon.pattern_match.group(1)
+    warna = zthon.pattern_match.group(1)
     chat = "@QuotLyBot"
     await edit_or_reply(zthon, "**جاري...**")
     async with bot.conversation(chat) as conv:
@@ -142,11 +142,11 @@ async def iq(zthon):
             second = await bot.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await iqthon.reply("**قم بفك الحظر من البوت : @QuotLyBot **")
+            await zthon.reply("**قم بفك الحظر من البوت : @QuotLyBot **")
             return
         if response.text.startswith("Hi!"):
             await edit_or_reply(
-                iqthon, "**الرجاء تعطيل إعادة توجيه إعدادات الخصوصية الخاصة بك**")
+                zthon, "**الرجاء تعطيل إعادة توجيه إعدادات الخصوصية الخاصة بك**")
         else:
             await iqthon.delete()
             await bot.forward_messages(iqthon.chat_id, response.message)
@@ -160,7 +160,7 @@ async def iq(zthon):
     try:
         async with iqthon.client.conversation(chat) as conv:
             try:
-                await iqthon.edit("**التعرف على الأغاني...**")
+                await zthon.edit("**التعرف على الأغاني...**")
                 start_msg = await conv.send_message("/start")
                 await conv.get_response()
                 send_audio = await conv.send_message(reply_message)
@@ -168,7 +168,7 @@ async def iq(zthon):
                 if not check.text.startswith("Audio received"):
                     return await iqthon.edit(
                         "**حدث خطأ أثناء تحديد الأغنية. حاول استخدام رسالة صوتية تتراوح مدتها من 5 إلى 10 ثوانٍ.**")
-                await iqthon.edit("**انتظر لحظة...**")
+                await zthon.edit("**انتظر لحظة...**")
                 result = await conv.get_response()
                 await zthon.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
@@ -179,11 +179,11 @@ async def iq(zthon):
             await iqthon.edit(namem)
             await iqthon.client.delete_messages(                conv.chat_id, [start_msg.id, send_audio.id, check.id, result.id]            )
     except TimeoutError:
-        return await iqthon.edit(            "**هناك خطا نعتذر**")
+        return await zthon.edit(            "**هناك خطا نعتذر**")
 @zthon.on(admin_cmd(pattern="انشاء بريد(?: |$)(.*)"))
 async def _(zthon):
     chat = "@TempMailBot"
-    geez = await iqthon.edit("**جاري انشاء بريد ...**")
+    geez = await zthon.edit("**جاري انشاء بريد ...**")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(events.NewMessage(                incoming=True,                from_users=220112646            )            )            
@@ -198,8 +198,8 @@ async def _(zthon):
             return
         await iqthon.edit(f"بريدك الخاص هوه : ~ `{response.message.message}`\n[انقر هنا للتحقق من رسائل بريدك]({iqthonbot})")
 @zthon.on(admin_cmd(pattern="سجل الاسماء(ألف)?(?:\s|$)([\s\S]*)"))
-async def _(iqthon):  # sourcery no-metrics
-    input_str = "".join(iqthon.text.split(maxsplit=1)[1:])
+async def _(zthon):  # sourcery no-metrics
+    input_str = "".join(zthon.text.split(maxsplit=1)[1:])
     reply_message = await iqthon.get_reply_message()
     if not input_str and not reply_message:
         await edit_delete(iqthon, "**♛ ⦙ قم بالـرد على رسالـة لمستخـدم للحصـول على إسمـه/سجل يوزراتـه أو قم بإعطـاء آيـدي المستخـدم/يـوزر المستخـدم ✦**")
@@ -221,13 +221,13 @@ async def _(iqthon):  # sourcery no-metrics
             except asyncio.TimeoutError:
                 break
             responses.append(response.text)
-        await iqthon.client.send_read_acknowledge(conv.chat_id)
+        await zthon.client.send_read_acknowledge(conv.chat_id)
     if not responses:
         await edit_delete(iqthon, "**♛ ⦙ لا يستطيـع البـوت جلـب النتائـج ⚠️**")
     if "No records found" in responses:
         await edit_delete(iqthon, "**♛ ⦙ المستخـدم ليـس لديـه أيّ سجـل ✕**")
     names, usernames = await sanga_seperator(responses)
-    cmd = iqthon.pattern_match.group(1)
+    cmd = zthon.pattern_match.group(1)
     sandy = None
     check = usernames if cmd == "u" else names
     for i in check:
