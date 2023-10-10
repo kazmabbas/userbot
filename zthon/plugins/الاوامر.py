@@ -1,9 +1,9 @@
-# refz - yousef
-# Copyright (C) 2022 refz . All Rights Reserved
-#< https://t.me/M_4_R_0 >
-# This file is a part of < https://github.com/Zed-Thon/ZelZal/ >
+# refz - senzir
+# Copyright (C) 2023 Refz . All Rights Reserved
+#< https://t.me/def_Zoka >
+# This file is a part of < https://github.com/githupsource/source_reefz/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Zed-Thon/ZelZal/blob/main/LICENSE/>.
+# <https://github.com/Dev-senzir/LICINSE/>.
 
 import json
 import math
