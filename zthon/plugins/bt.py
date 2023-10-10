@@ -7,7 +7,7 @@ from telethon import events
 from asyncio.exceptions import TimeoutError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import ExportChatInviteRequest
-from IqArab import iqthon
+from zthon import zdthon
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import get_user_from_event, sanga_seperator
 from bs4 import BeautifulSoup
@@ -21,7 +21,7 @@ from barcode.writer import ImageWriter
 from bs4 import BeautifulSoup
 from PIL import Image, ImageColor
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from IqArab import iqthon
+from zdthon import zthon
 from ..Config import Config
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
@@ -54,7 +54,7 @@ async def iq(iqthon):
         silent=True if iqthon.is_reply else False,
         hide_via=True)
 @zthon.on(admin_cmd(pattern="همسه ?(.*)"))
-async def iq(iqthon):
+async def iq(zthon):
     if iqthon.fwd_from:
         return
     kkno = iqthon.pattern_match.group(1)
@@ -65,7 +65,7 @@ async def iq(iqthon):
     await l5[0].click(iqthon.chat_id)
     await iqthon.delete()
 @zthon.on(admin_cmd(pattern="حالتي ?(.*)"))
-async def iq(iqthon):
+async def iq(zthon):
     await iqthon.edit("جاري الفحص")
     async with bot.conversation("@SpamBot") as l5:
         try:
@@ -79,10 +79,10 @@ async def iq(iqthon):
             return
         await iqthon.edit(f"~ {dontTag.message.message}")    
 @zthon.on(admin_cmd(pattern="بي دي اف ?(.*)"))
-async def _(iqthon):
+async def _(zthon):
     if not iqthon.reply_to_msg_id:
         return await iqthon.edit("**الرجاء الرد على أي نص**")
-    reply_message = await iqthon.get_reply_message()
+    reply_message = await zthon.get_reply_message()
     chat = "@office2pdf_bot"
     await iqthon.edit("**جاري تحويل إلى PDF...**")
     try:
@@ -100,10 +100,10 @@ async def _(iqthon):
                 pdf = await conv.get_response()
                 await bot.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await iqthon.edit("**قم بفك الحظر من البوت : @office2pdf_bot **")
+                await zthon.edit("**قم بفك الحظر من البوت : @office2pdf_bot **")
                 return
-            await iqthon.client.send_message(event.chat_id, pdf)
-            await iqthon.client.delete_messages(                conv.chat_id,                [
+            await zthon.client.send_message(event.chat_id, pdf)
+            await zthon.client.delete_messages(                conv.chat_id,                [
                     msg_start.id,
                     response.id,
                     msg.id,
@@ -115,7 +115,7 @@ async def _(iqthon):
                     pdf.id,
                     convert.id,
                 ],)
-            await iqthon.delete()
+            await zthon.delete()
     except TimeoutError:
         return await iqthon.edit("**هناك خطا نعتذر**") 
 @zthon.on(admin_cmd(pattern="بوتي$"))
@@ -123,7 +123,7 @@ async def iq(iqbot):
     TG_BOT_USERNAME = Config.TG_BOT_USERNAME
     await iqbot.reply(f"**بوت تليثون الخاص بك : {TG_BOT_USERNAME}**")
 @zthon.on(admin_cmd(pattern="ملصقي ?(.*)"))
-async def iq(iqthon):
+async def iq(zthon):
     if iqthon.fwd_from:
         return
     if not iqthon.reply_to_msg_id:
@@ -132,7 +132,7 @@ async def iq(iqthon):
     reply_message = await iqthon.get_reply_message()
     warna = iqthon.pattern_match.group(1)
     chat = "@QuotLyBot"
-    await edit_or_reply(iqthon, "**جاري...**")
+    await edit_or_reply(zthon, "**جاري...**")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(events.NewMessage(incoming=True, from_users=1031952739))
@@ -152,8 +152,8 @@ async def iq(iqthon):
             await bot.forward_messages(iqthon.chat_id, response.message)
     await bot.delete_messages(conv.chat_id, [first.id, ok.id, second.id, response.id])
 @zthon.on(admin_cmd(pattern="اسم الاغنيه ?(.*)"))
-async def iq(iqthon):
-    if not iqthon.reply_to_msg_id:
+async def iq(zthon):
+    if not zthon.reply_to_msg_id:
         return await iqthon.edit("**الرجاء الرد على الرسالة**")
     reply_message = await iqthon.get_reply_message()
     chat = "@auddbot"
@@ -170,9 +170,9 @@ async def iq(iqthon):
                         "**حدث خطأ أثناء تحديد الأغنية. حاول استخدام رسالة صوتية تتراوح مدتها من 5 إلى 10 ثوانٍ.**")
                 await iqthon.edit("**انتظر لحظة...**")
                 result = await conv.get_response()
-                await iqthon.client.send_read_acknowledge(conv.chat_id)
+                await zthon.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await iqthon.edit("**قم بفك الحظر من البوت : @auddbot dan coba lagi:")
+                await zthon.edit("**قم بفك الحظر من البوت : @auddbot dan coba lagi:")
                 return
             namem = f"**إسم الأغنية : {result.text.splitlines()[0]}**\
         \n\n**تفاصيل : {result.text.splitlines()[2]}**"
@@ -181,7 +181,7 @@ async def iq(iqthon):
     except TimeoutError:
         return await iqthon.edit(            "**هناك خطا نعتذر**")
 @zthon.on(admin_cmd(pattern="انشاء بريد(?: |$)(.*)"))
-async def _(iqthon):
+async def _(zthon):
     chat = "@TempMailBot"
     geez = await iqthon.edit("**جاري انشاء بريد ...**")
     async with bot.conversation(chat) as conv:
