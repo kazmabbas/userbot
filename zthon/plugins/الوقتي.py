@@ -1,13 +1,13 @@
-# @Zed-Thon - ZelZal
-# Copyright (C) 2022 ZedThon . All Rights Reserved
-#< https://t.me/ZedThon >
-# This file is a part of < https://github.com/Zed-Thon/ZelZal/ >
+# refz - senzir
+# Copyright (C) 2023 Refz . All Rights Reserved
+#< https://t.me/def_Zoka >
+# This file is a part of < https://github.com/githupsource/source_reefz/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Zed-Thon/ZelZal/blob/main/LICENSE/>.
+# <https://github.com/Dev-senzir/LICINSE/>.
 #كـود الصورة الوقتيه كتـابتي وتعديلـي من زمان ومتعوب عليها 
 #+ كـود زخـرفة الصورة الوقتيه
 #+ دددي لا ابلـع حســابك بـانـد بطـعـم الليمــون 🍋😹🤘
-#زلــزال الهيبــه يـ ولــد - حقــوق لـ التــاريـخ ®
+#سينزر الهيبــه يـ ولــد - حقــوق لـ التــاريـخ ®
 #هههههههههههههههههههههههههههههههههههههههههههههههههه
 
 import asyncio
