@@ -1,9 +1,9 @@
-# Zed-Thon
-# Copyright (C) 2023 Zed-Thon . All Rights Reserved
-#
-# This file is a part of < https://github.com/Zed-Thon/ZelZal/ >
+# refz - senzir
+# Copyright (C) 2023 Refz . All Rights Reserved
+#< https://t.me/def_Zoka >
+# This file is a part of < https://github.com/githupsource/source_reefz/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Zed-Thon/ZelZal/blob/master/LICENSE/>.
+# <https://github.com/Dev-senzir/LICINSE/>.
 
 import asyncio
 import requests
@@ -38,7 +38,7 @@ ZEDTHON_BEST_SOURCE = "[ᯓ 𝐑𝐄𝐅𝐙 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 - اذ
 ZEDTHON_PRO_SOURCE = "[ᯓ 𝐑𝐄𝐅𝐙 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 - اذاعـة زاجـل 🕊](t.me/def_Zoka) .\n\n**- جـارِ الاذاعـه لـ قائمـة زاجـل 📜\n- الرجـاء الانتظـار .. لحظـات ⏳**"
 ZELZAL_PRO_DEV = "[ᯓ 𝐑𝐄𝐅𝐙 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 - اذاعـة زاجـل 🕊](t.me/def_Zoka) .\n⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆\n**⎉╎قائمـة الاذاعـه فـارغـه ؟! ❌**\n**⎉╎قم باضافـة يوزرات عبـر الامر**\n`.اضفـ زاجل` **بالـرد ع عدة يوزرات تفـصل بينهم مسـافـات**"
 # =========================================================== #
-#                                      زلـــزال الهيبـــه - T.me/zzzzl1l                                  #
+#                                      سينزر الهيبـــه - T.me/IC_X_K                                  #
 # =========================================================== #
 #                                      تـاريـخ كتابـة الملـفـ - 7 ابريل/2023                                  #
 # =========================================================== #
