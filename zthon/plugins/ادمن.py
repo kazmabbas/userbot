@@ -11,7 +11,6 @@ from ..helpers.utils import _format
 from . import BOTLOG, BOTLOG_CHATID, extract_time, get_user_from_event
 
 plugin_category = "الادمن"
-
 # =================== CONSTANT ===================
 NO_ADMIN = "**⎉╎  عذرا انا لست مشرف في المجموعة ❕**"
 NO_PERM = "**⎉╎ يبـدو انه ليس لديك صلاحيات كافية هذا حزين جدا 🥱♥**"
