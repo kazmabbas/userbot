@@ -41,13 +41,13 @@ def iqtfy(inputString: str) -> str:
 
 @zthon.on(admin_cmd(pattern="اكس او(?: |$)(.*)"))
 async def iq(zthon):
-    kn = zthon.pattern_match.group(1)
+    zelzal = zthon.pattern_match.group(1)
     if not kn:
         if iqthon.is_reply:
-            (await iqthon.get_reply_message()).message
+            (await zthon.get_reply_message()).message
 
             return
-    LLL5L = await bot.inline_query("xobot", f"{(iqtfy(kn))}")
+    zelzal = await bot.inline_query("xobot", f"{(iqtfy(kn))}")
     await LLL5L[0].click(
         iqthon.chat_id,
         reply_to=zthon.reply_to_msg_id,
@@ -57,7 +57,7 @@ async def iq(zthon):
 async def iq(zthon):
     if iqthon.fwd_from:
         return
-    kkno = zthon.pattern_match.group(1)
+    zelzal = zthon.pattern_match.group(1)
     donttag = "@whisperBot"
     if iqthon.reply_to_msg_id:
         await iqthon.get_reply_message()
@@ -66,7 +66,7 @@ async def iq(zthon):
     await iqthon.delete()
 @zthon.on(admin_cmd(pattern="حالتي ?(.*)"))
 async def iq(zthon):
-    await iqthon.edit("جاري الفحص")
+    await zthon.edit("جاري الفحص")
     async with bot.conversation("@SpamBot") as l5:
         try:
             dontTag = l5.wait_event(
@@ -80,7 +80,7 @@ async def iq(zthon):
         await iqthon.edit(f"~ {dontTag.message.message}")    
 @zthon.on(admin_cmd(pattern="بي دي اف ?(.*)"))
 async def _(zthon):
-    if not iqthon.reply_to_msg_id:
+    if not zthon.reply_to_msg_id:
         return await zthon.edit("**الرجاء الرد على أي نص**")
     reply_message = await zthon.get_reply_message()
     chat = "@office2pdf_bot"
@@ -95,7 +95,7 @@ async def _(zthon):
                 cnfrm = await conv.get_response()
                 editfilename = await conv.send_message("نعم")
                 enterfilename = await conv.get_response()
-                filename = await conv.send_message("IQTHON")
+                filename = await conv.send_message("def_Zoka")
                 started = await conv.get_response()
                 pdf = await conv.get_response()
                 await bot.send_read_acknowledge(conv.chat_id)
@@ -124,9 +124,9 @@ async def iq(iqbot):
     await iqbot.reply(f"**بوت تليثون الخاص بك : {TG_BOT_USERNAME}**")
 @zthon.on(admin_cmd(pattern="ملصقي ?(.*)"))
 async def iq(zthon):
-    if iqthon.fwd_from:
+    if zthon.fwd_from:
         return
-    if not iqthon.reply_to_msg_id:
+    if not zthon.reply_to_msg_id:
         await edit_delete(zthon, "**الرجاء الرد على الرسالة**")
         return
     reply_message = await iqthon.get_reply_message()
