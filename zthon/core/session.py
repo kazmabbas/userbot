@@ -35,7 +35,7 @@ except Exception as e:
     sys.exit()
 
 zedub.tgbot = tgbot = ZedUserBotClient(
-    session="TepthonSessionBot",
+    session="SESION_REFZ_BOT",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     loop=loop,
