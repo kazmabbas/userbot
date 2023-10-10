@@ -832,6 +832,17 @@ async def permalink(mention):
     tag = user.first_name.replace("\u2060", "") if user.first_name else user.username
     hah = random.choice(heno)
     await edit_or_reply(mention, f"**- {hah}**")
+    @zthon.on(events.NewMessage(outgoing=False, pattern='منصب؟'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownersayed_id :
+        order = await event.reply('يب منصب ✓')
+ownersayed1_id = 6301863282
+@zthon.on(events.NewMessage(outgoing=False, pattern='منو فخر العرب؟'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownersayed1_id :
+        order = await event.reply('انته فخر العرب مح ❤️')
 
 
 # Copyright (C) 2022 Zed-Thon . All Rights Reserved
