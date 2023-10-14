@@ -22,8 +22,7 @@ LOGS = logging.getLogger(__name__)
 ZDEV = gvarstatus("sudoenable") or "true"
 
 ZelzalDV_cmd = (
-    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الكيثاب](t.me/def_Zoka) 𓆪\n\n"
- 
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الترحب واردود](t.me/def_Zoka) 𓆪\n\n"
 "↫ .رد + نص الرد بالرد ع كلمة الرد \n"
 "↫ .رد + نص الرد بالرد ع ميديا \n"
 "↫ .حذف رد + كلمة الرد \n"
