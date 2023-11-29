@@ -18,14 +18,14 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ZED - THON"
 
 @zedub.zed_cmd(pattern=r"تهكير$")
 async def _(event):
-    zel_dev = (6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282, 6301863282)
+    zel_dev = (6783851654, 6783851654, 6556390631, 6783851654, 6556390631, 6783851654, 6556390631, 6783851654, 6783851654, 6556390631, 6783851654, 6556390631, 6783851654, 6556390631, 6783851654, 6783851654, 6556390631, 6783851654, 6783851654)
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
         await event.client(GetFullUserRequest(reply_message.sender_id))
         idd = reply_message.sender_id
         if idd in zel_dev:
             await edit_or_reply(event, "**⪼ دي انـه احـد المطـور المساعدين**\n**⪼ لا استطيع تهكيـر المطـورين**")
-        if idd == 6301863282 or idd == 6301863282 or idd == 6301863282 or idd == 1346542270:
+        if idd == 6783851654 or idd == 6783851654 or idd == 6783851654 or idd == 6556390631:
             await edit_or_reply(event, "**⪼ دي انـه مطـور السـورس**\n**⪼ لا استطيع تهكيـر مطـوري**")
         else:
             event = await edit_or_reply(event, "**... جاري تهكير المستخدم**")
