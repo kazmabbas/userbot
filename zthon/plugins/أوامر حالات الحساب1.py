@@ -1,6 +1,6 @@
 #المطور يوسف
 #refz
-#@IC_X_K .
+#@programmer_senzir .
 import os
 import urllib
 
