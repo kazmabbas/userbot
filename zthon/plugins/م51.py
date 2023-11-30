@@ -450,7 +450,7 @@ zedub.loop.create_task(_init())
 
 
 # Copyright (C) 2022 senzir . All Rights Reserved
-@zedub.zed_cmd(pattern="م50")
+@zedub.zed_cmd(pattern="م51")
 async def cmd(zelzallll):
     await edit_or_reply(zelzallll, ZelzalDV_cmd)
 
