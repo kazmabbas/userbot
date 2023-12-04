@@ -17,7 +17,7 @@ from ..core.managers import edit_or_reply
 
 
 
-@zedub.zed_cmd(pattern="بحث جوجل  ?(.*)")
+@zedub.zed_cmd(pattern="كسم عقرب  ?(.*)")
 async def zilzal(event):
     card = event.pattern_match.group(1)
     chat = "@PlayGgbot"
