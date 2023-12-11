@@ -12,12 +12,12 @@ from zthon.sql_helper.globals import addgvar, gvarstatus
 plugin_category = "utils"
 
 
-OFFLINE_TAG = "𝙎𓏺𝞝𝙉𝙕𝙄𝙍 𓅃"
+OFFLINE_TAG = "𝐑𝐄𝐏𝐄𝐓𝐇𝐎𝐍𝐄 𓅃"
 
 
 @zedub.zed_cmd(
-    pattern="اسمي سينزر$",
-    command=("اسمي سينزر", plugin_category),
+    pattern="اسمي ريبيثون$",
+    command=("اسمي ريبيثون", plugin_category),
     info={
         "header": "To your status as offline",
         "description": " it change your pic as offline, and add offline tag in name.",
@@ -34,7 +34,7 @@ async def pussy(event):
     if not os.path.isdir("./temp"):
         os.mkdir("./temp")
     urllib.request.urlretrieve(
-        "https://graph.org/file/ef1d7b613509aede939c5.jpg", photo
+        "https://graph.org/file/8d2d570d3a2af86986463.jpg", photo
     )
     if photo:
         file = await event.client.upload_file(photo)
