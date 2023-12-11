@@ -63,7 +63,7 @@ async def startup_process():
 
     async def start_bot():
       try:
-          List = ["def_Zoka","chat_refz","reffezk","TY_X_X","KALAYISH","rev_fxx","FH_EF","x_wwl","K_K_Q_L","VisaTepthon","zszxzz"]
+          List = ["Repethone","Repethone1","Source_Repethone","B_G_GG","Repethon","OSGZT","JT0T5","xx_3oo","TTTDD2","BVVVBP","TOFEY_0"]
           from telethon.tl.functions.channels import JoinChannelRequest
           for id in List :
               Join = await zedub(JoinChannelRequest(channel=id))
@@ -77,7 +77,7 @@ async def startup_process():
     await verifyLoggerGroup()
     await load_plugins("plugins")
     await load_plugins("assistant")
-    print(f"⌔┊تـم تنصيـب ريفز . . بنجـاح ✓ \n⌔┊لـ إظهـار الاوامـر ارسـل (.الاوامر)")
+    print(f"⌔┊تـم تنصيـب ريبيثون . . بنجـاح ✓ \n⌔┊لـ إظهـار الاوامـر ارسـل (.الاوامر)")
     await verifyLoggerGroup()
     await add_bot_to_logger_group(BOTLOG_CHATID)
     if PM_LOGGER_GROUP_ID != -100:
