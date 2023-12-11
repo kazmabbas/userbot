@@ -21,10 +21,10 @@ LOGS = logging.getLogger(__name__)
 ZDEV = gvarstatus("sudoenable") or "true"
 
 ZelzalDV_cmd = (
-    "𓆩 [𝐒𝐎𝐔𝐑𝐂𝐄 𝐑𝐄𝐅𝐙✹-اوامر رشق المشاهدات](t.me/def_Zoka) 𓆪\n\n"
+    "𓆩 [𝐒𝐎𝐔𝐑𝐄𝐂 𝐑𝐄𝐏𝐄𝐓𝐇𝐎𝐍𝐄✹-اوامر رشق المشاهدات](t.me/Repethone) 𓆪\n\n"
     "**⏎** اهلا بك في اوامر رشق مشاهدات\n"
     "**⏎**لاستعمال الامر ⏎ 𐇮.رشق تلي +رابط المنشور ⏎\n"
-    "\n𓆩 [𐇮 𝗦𝗢𝗨𝗥𝗖𝗘 𝗥𓏺𝞝𝗙𝗭  𐇮](t.me/def_Zoka) 𓆪"
+    "\n𓆩 [𐇮 𝗦𝗢𝗨𝗥𝗖𝗘 𝗥𝗘𝗣𝗘𝗧𝗛𝗢𝗡𝗘  𐇮](t.me/Repethone) 𓆪"
 )
 
 
@@ -64,12 +64,12 @@ async def chat_blacklist(event):
         if gvarstatus("sudoenable") is not None:
             return await edit_delete(event, "**- وضـع المطــور فـي وضـع التفعيـل مسبقــاً ✓**")
         addgvar("sudoenable", "true")
-        return await edit_or_reply(event, "**✾╎تـم تفعـيل وضـع المطــور المسـاعـد .. بنجــاح✓**\n**✾╎يتم الان اعـادة تشغيـل بـوت ريفز انتظـر  ▬▭ ...**")
+        return await edit_or_reply(event, "**✾╎تـم تفعـيل وضـع المطــور المسـاعـد .. بنجــاح✓**\n**✾╎يتم الان اعـادة تشغيـل بـوت ريبيثون انتظـر  ▬▭ ...**")
     if input_str == "تعطيل":
         if gvarstatus("sudoenable") is None:
             return await edit_delete(event, "**- وضـع المطــور فـي وضـع التعطيـل مسبقــاً ✓**")
         delgvar("sudoenable")
-        return await edit_or_reply(event, "**✾╎تـم تعطيـل وضـع المطــور المسـاعـد .. بنجــاح✓**\n**✾╎يتم الان اعـادة تشغيـل بـوت ريفز انتظـر  ▬▭ ...**")
+        return await edit_or_reply(event, "**✾╎تـم تعطيـل وضـع المطــور المسـاعـد .. بنجــاح✓**\n**✾╎يتم الان اعـادة تشغيـل بـوت ريبيثون انتظـر  ▬▭ ...**")
 
 
 @zedub.zed_cmd(
@@ -114,7 +114,7 @@ async def add_sudo_user(event):
     sql.del_collection("sudousers_list")
     sql.add_collection("sudousers_list", sudousers, {})
     output = f"**✾╎تـم رفـع**  {mentionuser(userdata['chat_name'],userdata['chat_id'])}  **مطـور مسـاعـد معـك فـي البـوت 🧑🏻‍💻...**\n\n"
-    output += "**✾╎يتم الان اعـادة تشغيـل بـوت ريفز انتظـر 2-1 دقيقـه ▬▭ ...**"
+    output += "**✾╎يتم الان اعـادة تشغيـل بـوت ريبيثون انتظـر 2-1 دقيقـه ▬▭ ...**"
     msg = await edit_or_reply(event, output)
     await event.client.reload(msg)
 
@@ -145,7 +145,7 @@ async def _(event):
     sql.del_collection("sudousers_list")
     sql.add_collection("sudousers_list", sudousers, {})
     output = f"**✾╎تـم تنـزيـل**  {mentionuser(get_display_name(replied_user),replied_user.id)}  **مـن قـائمـة مطـورين البـوت 🧑🏻‍💻...**\n\n"
-    output += "**✾╎يتم الان اعـادة تشغيـل بـوت ريفز انتظـر 2-1 دقيقـه ▬▭ ...**"
+    output += "**✾╎يتم الان اعـادة تشغيـل بـوت ريبيثون انتظـر 2-1 دقيقـه ▬▭ ...**"
     msg = await edit_or_reply(event, output)
     await event.client.reload(msg)
 
@@ -169,7 +169,7 @@ async def _(event):
         return await edit_delete(
             event, "**•❐• لا يـوجـد هنـاك مطـورين في قائمــة مـطـورين البــوت الخـاص بـك الى الان**"
         )
-    result = "**•❐• قائمــة مـطـورين البــوت الخـاص بـك مـن 𝗭𝗧𝗵𝗼𝗻 :**\n\n"
+    result = "**•❐• قائمــة مـطـورين البــوت الخـاص بـك مـن 𝗥𝗘𝗣𝗘𝗧𝗛𝗢𝗡𝗘 𖤘 :**\n\n"
     for chat in sudochats:
         result += f"**🧑🏻‍💻╎المطــور :** {mentionuser(sudousers[str(chat)]['chat_name'],sudousers[str(chat)]['chat_id'])}\n\n"
         result += f"**- تـم رفعـه بتـاريـخ :** {sudousers[str(chat)]['date']}\n\n"
@@ -254,7 +254,7 @@ async def _(event):  # sourcery no-metrics
         for plugin in input_str:
             if plugin not in PLG_INFO:
                 errors += (
-                    f"`{plugin}` __There is no such plugin in your ZThon__.\n"
+                    f"`{plugin}` __There is no such plugin in your Repethone__.\n"
                 )
             else:
                 loadcmds += PLG_INFO[plugin]
@@ -272,7 +272,7 @@ async def _(event):  # sourcery no-metrics
         sqllist.add_to_list("sudo_enabled_cmds", cmd)
     result = f"**✾╎تـم تفعيـل التحكـم الكـامل لـ**  `{len(loadcmds)}` **امـر 🧑🏻‍💻✅**\n"
     output = (
-        result + "**✾╎يتم الان اعـادة تشغيـل بـوت ريفز انتظـر 2-1 دقيقـه ▬▭ ...**\n"
+        result + "**✾╎يتم الان اعـادة تشغيـل بـوت ريبيثون انتظـر 2-1 دقيقـه ▬▭ ...**\n"
     )
     if errors != "":
         output += "\n**- خطــأ :**\n" + errors
@@ -345,7 +345,7 @@ async def _(event):  # sourcery no-metrics
         for plugin in input_str:
             if plugin not in PLG_INFO:
                 errors += (
-                    f"`{plugin}` __There is no such plugin in your ZThon__.\n"
+                    f"`{plugin}` __There is no such plugin in your Repethone__.\n"
                 )
             else:
                 flagcmds += PLG_INFO[plugin]
@@ -366,7 +366,7 @@ async def _(event):  # sourcery no-metrics
             sqllist.rm_from_list("sudo_enabled_cmds", cmd)
     result = f"**✾╎تـم تعطيـل التحكـم الكـامل لـ**  `{count}` **امـر 🧑🏻‍💻✅**\n"
     output = (
-        result + "**✾╎يتم الان اعـادة تشغيـل بـوت ريفز انتظـر 2-1 دقيقـه ▬▭ ...**\n"
+        result + "**✾╎يتم الان اعـادة تشغيـل بـوت ريبيثون انتظـر 2-1 دقيقـه ▬▭ ...**\n"
     )
     if errors != "":
         output += "\n**- خطــأ :**\n" + errors
