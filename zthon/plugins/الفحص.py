@@ -74,7 +74,7 @@ zed_temp = """{ALIVE_TEXT}
 
 **{Z_EMOJI} قاعدۿ البيانات :** تعمل بنـجاح
 **{Z_EMOJI} إصـدار التـيليثون :** `{telever}`
-**{Z_EMOJI} إصـدار ريفز :** `{tepver}`
+**{Z_EMOJI} إصـدار ريبيثون :** `{tepver}`
 **{Z_EMOJI} إصـدار البـايثون :** `{pyver}`
 **{Z_EMOJI} الوقـت :** `{uptime}`
 **{Z_EMOJI} المسـتخدم:** {mention}
@@ -97,7 +97,7 @@ async def amireallyialive(event):
     Z_EMOJI = gvarstatus("ALIVE_EMOJI") or "❈┊"
     zed_caption = "** بـوت  ريبيثون 𝗥𝗘𝗣𝗘𝗧𝗛𝗢𝗡𝗘  يعمـل .. بنجـاح ☑️ 𓆩 **\n"
     zed_caption += f"**{Z_EMOJI} إصـدار التـيليثون :** `{version.__version__}\n`"
-    zed_caption += f"**{Z_EMOJI} إصـدار ريفز :** `{zedversion}`\n"
+    zed_caption += f"**{Z_EMOJI} إصـدار ريبيثون :** `{zedversion}`\n"
     zed_caption += f"**{Z_EMOJI} إصـدار البـايثون :** `{python_version()}\n`"
     zed_caption += f"**{Z_EMOJI} المسـتخدم :** {mention}\n"
     results = await event.client.inline_query(Config.TG_BOT_USERNAME, zed_caption)
