@@ -15,7 +15,7 @@ async def on_plug_in_callback_query_handler(event):
         try:
             reply_pop_up_alert = jsondata[f"{timestamp}"]["text"]
         except KeyError:
-            reply_pop_up_alert = "- عذرًا .. هذه الرسـالة لم تعد موجـوده في سيـرفرات ريفز"
+            reply_pop_up_alert = "- عذرًا .. هذه الرسـالة لم تعد موجـوده في سيـرفرات ريبيثون"
     else:
-        reply_pop_up_alert = "- عذرًا .. هذه الرسـالة لم تعد موجـوده في سيـرفرات ريفز"
+        reply_pop_up_alert = "- عذرًا .. هذه الرسـالة لم تعد موجـوده في سيـرفرات ريبيثون"
     await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
