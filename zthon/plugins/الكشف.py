@@ -76,15 +76,15 @@ async def fetch_info(replied_user, event):
     user_bio = "⌔∮ هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
     rozrtba = (
         ".「  مطـور السورس  」."
-        if user_id == 1694386561 or user_id == 2034443585 or user_id == 1280124974
+        if user_id == 5871764800 or user_id == 5339964426 or user_id == 6563583299
         else (".「  العضـو  」.")
     )
     rozrtba = (
         ".「 مـالك الحساب  」."
         if user_id == (await event.client.get_me()).id
-        and user_id != 1694386561
-        and user_id != 2034443585
-        and user_id != 1280124974
+        and user_id != 5871764800
+        and user_id != 5339964426
+        and user_id != 6563583299
         else rozrtba
     )
     caption = " \n"
