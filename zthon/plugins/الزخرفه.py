@@ -21,14 +21,14 @@ from ..core.managers import edit_or_reply
 @zedub.zed_cmd(pattern="زخرفه ?(.*)")
 async def zilzal(event):
     card = event.pattern_match.group(1)
-    chat = "@r_e_f_z_bot"
+    chat = "@O_H8bot"
     reply_id_ = await reply_id(event)
     zed = await edit_or_reply(event, "**جـارِ الزخـرفـه العربيـة 💞🧸...**")
     async with event.client.conversation(chat) as conv:
         try:
             await conv.send_message(card)
         except YouBlockedUserError:
-            await zedub(unblock("ZZ_ARBot"))
+            await zedub(unblock("O_H8bot"))
             await conv.send_message(card)
         await asyncio.sleep(2)
         response = await conv.get_response()
@@ -47,7 +47,7 @@ async def zelzal(event):
         try:
             await conv.send_message(card)
         except YouBlockedUserError:
-            await zedub(unblock("r_e_f_z_bot"))
+            await zedub(unblock("O_H8bot"))
             await conv.send_message(card)
         await asyncio.sleep(2)
         response = await conv.get_response()
