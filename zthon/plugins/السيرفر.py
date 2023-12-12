@@ -73,9 +73,9 @@ async def variable(event):  # sourcery no-metrics
         for i in configs:
             if variable in i:
                 _, val = i.split("= ")
-                return await cat.edit("𓆩 𝐑𝐄𝐅𝐙 - 𝗖𝗼𝗻𝗳𝗶𝗴 𝗩𝗮𝗿𝘀 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻" f"\n\n**⌔∮الفـار** `{variable} = {val}`")
+                return await cat.edit("𓆩 𝗥𝗘𝗣𝗘𝗧𝗛𝗢𝗡𝗘 - 𝗖𝗼𝗻𝗳𝗶𝗴 𝗩𝗮𝗿𝘀 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻" f"\n\n**⌔∮الفـار** `{variable} = {val}`")
         await cat.edit(
-            "𓆩 𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - 𝗖𝗼𝗻𝗳𝗶𝗴 𝗩𝗮𝗿𝘀 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻" f"\n\n**⌔∮الفـار :** -> {variable} **غيـر موجود**❌"
+            "𓆩 𝗦𝗼𝘂𝗿𝗰𝗲 𝗥𝗘𝗣𝗘𝗧𝗛𝗢𝗡𝗘 - 𝗖𝗼𝗻𝗳𝗶𝗴 𝗩𝗮𝗿𝘀 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻" f"\n\n**⌔∮الفـار :** -> {variable} **غيـر موجود**❌"
         )
     elif cmd == "ضع":
         variable = "".join(event.text.split(maxsplit=2)[2:])
@@ -96,11 +96,11 @@ async def variable(event):  # sourcery no-metrics
             else:
                 string += f"{i}"
         if match:
-            await cat.edit(f"**- تم تغيـر** `{variable}` **:**\n **- المتغيـر :** `{value}` \n**- يتم الان اعـادة تشغيـل بـوت زد ثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**")
+            await cat.edit(f"**- تم تغيـر** `{variable}` **:**\n **- المتغيـر :** `{value}` \n**- يتم الان اعـادة تشغيـل بـوت ريبيثون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**")
         else:
             string += f"    {variable} = {value}\n"
             await cat.edit(
-                f"**- تم إضـافـة** `{variable}` **:**\n **- المضـاف اليـه :** `{value}` \n**- يتم الان اعـادة تشغيـل بـوت زد ثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**"
+                f"**- تم إضـافـة** `{variable}` **:**\n **- المضـاف اليـه :** `{value}` \n**- يتم الان اعـادة تشغيـل بـوت ريبيثون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**"
             )
         with open(config, "w") as f1:
             f1.write(string)
@@ -119,10 +119,10 @@ async def variable(event):  # sourcery no-metrics
             f1.write(string)
             f1.close()
         if match:
-            await cat.edit(f"**- الفـار** `{variable}`  **تم حذفه بنجاح. \n\n**- يتم الان اعـادة تشغيـل بـوت زد ثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**")
+            await cat.edit(f"**- الفـار** `{variable}`  **تم حذفه بنجاح. \n\n**- يتم الان اعـادة تشغيـل بـوت ريبيثون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**")
         else:
             await cat.edit(
-                "𓆩 𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - 𝗖𝗼𝗻𝗳𝗶𝗴 𝗩𝗮𝗿𝘀 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻" f"\n\n**⌔∮الفـار :** -> {variable} **غيـر موجود**❌"
+                "𓆩 𝗦𝗼𝘂𝗿𝗰𝗲 𝗥𝗘𝗣𝗘𝗧𝗛𝗢𝗡𝗘 - 𝗖𝗼𝗻𝗳𝗶𝗴 𝗩𝗮𝗿𝘀 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻" f"\n\n**⌔∮الفـار :** -> {variable} **غيـر موجود**❌"
             )
         await event.client.reload(cat)
 
@@ -148,7 +148,7 @@ async def _(event):
     zed = await edit_or_reply(
         event,
         f"**⌔∮ اهـلا عـزيـزي** - {mention}\n\n"
-        f"**⌔∮ يتـم الآن اعـادة تشغيـل بـوت تيبــثون فـي السيـرفـر قـد يستغـرق الامـر 2-3 دقيقـه ▬▭ ...**",
+        f"**⌔∮ يتـم الآن اعـادة تشغيـل بـوت ريبيثون فـي السيـرفـر قـد يستغـرق الامـر 2-3 دقيقـه ▬▭ ...**",
     )
     if cmd == "كلين":
         for file in exts:
