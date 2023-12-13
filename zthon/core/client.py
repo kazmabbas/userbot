@@ -179,7 +179,7 @@ class ZedUserBotClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        link = "[senzir (https://t.me/IC_X_K)"
+                        link = "[𝗧𝗢𝗙𝗘𝗬] (https://t.me/EEc5e)"
                         text = (
                             "**✘ تقـريـر إشعـار ريبيثون 𝗥𝗘𝗣𝗘𝗧𝗛𝗢𝗡𝗘  ✘**\n\n"
                             + "- يمكنك الإبـلاغ عن هـذا الإشعـار .. "
