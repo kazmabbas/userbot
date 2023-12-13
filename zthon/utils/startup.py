@@ -557,7 +557,7 @@ async def verifyLoggerGroup():
 
         _, groupid = await create_supergroup(
 
-            "كـروب السجـل ريفز", zedub, Config.TG_BOT_USERNAME, descript, photozed
+            "كــروب الــســجــل ريــبــيــثــون", zedub, Config.TG_BOT_USERNAME, descript, photozed
 
         )
 
