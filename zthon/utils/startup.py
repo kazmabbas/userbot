@@ -90,7 +90,7 @@ elif os.path.exists("config.py"):
 
 bot = zedub
 
-DEV = 6301863282
+DEV = 5871764800
 
 
 
@@ -170,11 +170,11 @@ async def startupmessage():
 
                 BOTLOG_CHATID,
 
-                "https://graph.org/file/5340a83ac9ca428089577.jpg",
+                "https://graph.org/file/8d2d570d3a2af86986463.jpg",
                 
-                caption="**•⎆┊تـم بـدء تشغـيل سـورس ريفز الخاص بك .. بنجاح 🧸♥️**",
+                caption="**•⎆┊تـم بـدء تشغـيل سـورس ريبيثون الخاص بك .. بنجاح 🧸♥️**",
                 
-                buttons=[(Button.url("𝗦َِ𝗼َِ𝗨َِ𝗿َِ𝗖َِ𝗲 َِ𝗥َِ𝗲َِ𝗙َِ𝘇", "https://t.me/def_Zoka"),)],
+                buttons=[(Button.url("𝗥𝗘𝗣𝗘𝗧𝗛𝗢𝗡𝗘", "https://t.me/Repethone"),)],
                 
             )
 
@@ -266,7 +266,7 @@ async def mybot():
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
-            await bot.send_message("@BotFather", "refz")
+            await bot.send_message("@BotFather", "Repethone)
             await asyncio.sleep(3)
             await bot.send_message("@BotFather", "/setname")
             await asyncio.sleep(1)
@@ -284,7 +284,7 @@ async def mybot():
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
-            await bot.send_message("@BotFather", f"- بـوت ريفز المسـاعـد ♥️🦾 الخـاص بـ  {bot.me.first_name} ")
+            await bot.send_message("@BotFather", f"- بـوت ريبيثون المسـاعـد ♥️🦾 الخـاص بـ  {bot.me.first_name} ")
             await asyncio.sleep(3)
             await bot.send_message("@BotFather", "/setdescription")
             await asyncio.sleep(1)
